@@ -1,7 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Microscope, Shield, Code, GraduationCap } from 'lucide-react';
+import { Microscope, Shield, BarChart, Code, GraduationCap, HeartPulse } from 'lucide-react';
 const EXPERIENCES = [
+  {
+    title: "AI/ML Intern",
+    organization: "DRDO (SAG)",
+    period: "Jul 2025 - Aug 2025",
+    description: "Developed “YouMatter”, a mental health chatbot leveraging NLP, data preprocessing, and intent recognition to provide support and resources.",
+    icon: <HeartPulse className="h-5 w-5" />,
+  },
   {
     title: "AI/ML Research Intern",
     organization: "IIT Jammu",
@@ -10,11 +17,11 @@ const EXPERIENCES = [
     icon: <Microscope className="h-5 w-5" />,
   },
   {
-    title: "Summer Intern",
-    organization: "DRDO (SAG)",
-    period: "Jun 2023 - Jul 2023",
-    description: "Assisted in research involving signal processing and deep learning applications for national defense systems. Optimized model inference times by 30%.",
-    icon: <Shield className="h-5 w-5" />,
+    title: "Data & ML Intern",
+    organization: "WinnoVation",
+    period: "Jun 2024 - Aug 2024",
+    description: "Performed Exploratory Data Analysis (EDA) and implemented ML models for classification and regression tasks. Created complex visualizations using statistical software.",
+    icon: <BarChart className="h-5 w-5" />,
   },
   {
     title: "Full Stack Development Intern",
@@ -25,9 +32,9 @@ const EXPERIENCES = [
   },
   {
     title: "Computer Science Engineering",
-    organization: "Lovely Professional University",
+    organization: "MBSCET",
     period: "2021 - 2025",
-    description: "Focusing on Artificial Intelligence and Data Science. Maintaining high academic standing with multiple project distinctions.",
+    description: "Pursuing B.Tech with a focus on Artificial Intelligence and Machine Learning systems.",
     icon: <GraduationCap className="h-5 w-5" />,
   }
 ];
@@ -36,7 +43,7 @@ export function ExperienceSection() {
     <section id="experience" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
       <div className="mb-16">
         <h2 className="text-3xl font-bold tracking-tight">Professional Journey</h2>
-        <p className="text-muted-foreground mt-2">Where I've contributed and learned.</p>
+        <p className="text-muted-foreground mt-2">Roles and academic milestones in AI & Engineering.</p>
       </div>
       <div className="relative border-l-2 border-orange-500/20 ml-4 md:ml-8 space-y-12">
         {EXPERIENCES.map((exp, index) => (

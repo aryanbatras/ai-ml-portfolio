@@ -10,16 +10,16 @@ export function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold mb-8">A Research-First Approach</h2>
+          <h2 className="text-3xl font-bold mb-8">Personal Narrative</h2>
           <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
             <p>
-              My journey in Machine Learning began with a simple curiosity about how patterns emerge from raw data. Today, that curiosity has evolved into a structured methodology focused on <span className="text-foreground font-medium">interpretability and efficiency</span>.
+              I’m an inquisitive and driven <span className="text-foreground font-semibold">AI and Machine Learning Engineer</span> in the making, currently pursuing a B.Tech in Computer Science Engineering at <span className="text-foreground font-semibold">MBSCET</span>.
             </p>
             <p>
-              Whether it's developing tissue aberration detection models at <span className="text-foreground font-medium">IIT Jammu</span> or optimizing algorithms during my time at <span className="text-foreground font-medium">DRDO</span>, I believe that the best AI solutions are those that solve real-world problems while maintaining scientific rigor.
+              My curiosity for how intelligence emerges from data fuels my passion for exploring the depths of <span className="text-foreground font-medium">machine learning, data science, and generative AI</span>. I thrive on the challenge of transforming raw information into actionable insights and intelligent systems.
             </p>
             <p>
-              I bridge the gap between academic research and practical implementation, transforming complex papers into performant codebases using PyTorch, TensorFlow, and modern MLOps tools.
+              Whether it’s architecting neural networks or performing complex exploratory data analysis, my goal is to build technology that is both scientifically rigorous and practically impactful.
             </p>
           </div>
         </motion.div>
