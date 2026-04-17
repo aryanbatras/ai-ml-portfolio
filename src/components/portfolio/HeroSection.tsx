@@ -29,7 +29,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, cubicBezier: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="mb-8"
           >
             <Avatar className="h-44 w-44 md:h-56 md:w-56 border-[6px] border-background shadow-2xl ring-4 ring-orange-500/10 overflow-hidden">

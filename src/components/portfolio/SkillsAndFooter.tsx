@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Phone, Terminal, Cpu, Database, ArrowUpCircle } from 'lucide-react';
+import { toast } from 'sonner';
 const SKILLS = [
   "Python", "Pandas", "Scikit-Learn", "Seaborn", "NumPy", "Matplotlib",
   "Classification", "NLP", "Data Preprocessing", "PyTorch",
@@ -17,6 +18,17 @@ const CONTACT_INFO = {
 };
 export function SkillsAndFooter() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleResumeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    toast.info("Resume available upon request", {
+      description: "Please reach out via email for the latest version of my CV.",
+      action: {
+        label: "Email Me",
+        onClick: () => window.location.href = `mailto:${CONTACT_INFO.email}`
+      }
+    });
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <footer id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-24 items-start">
@@ -85,9 +97,11 @@ export function SkillsAndFooter() {
           </div>
           <div className="flex items-center gap-6">
             <a href={CONTACT_INFO.github} target="_blank" rel="noreferrer" className="p-3 text-muted-foreground hover:text-orange-500 hover:scale-110 transition-all">
+              <div className="sr-only">GitHub</div>
               <Github className="h-8 w-8" />
             </a>
             <a href={CONTACT_INFO.linkedin} target="_blank" rel="noreferrer" className="p-3 text-muted-foreground hover:text-orange-500 hover:scale-110 transition-all">
+              <div className="sr-only">LinkedIn</div>
               <Linkedin className="h-8 w-8" />
             </a>
           </div>
@@ -99,7 +113,7 @@ export function SkillsAndFooter() {
           <span>© {new Date().getFullYear()} Ashutosh Bhat • Portfolio</span>
         </div>
         <div className="flex items-center gap-8 font-semibold">
-          <a href="#contact" className="hover:text-orange-500 transition-colors">Resume</a>
+          <a href="#contact" onClick={handleResumeClick} className="hover:text-orange-500 transition-colors">Resume</a>
           <a href="#projects" className="hover:text-orange-500 transition-colors">Projects</a>
           <button onClick={scrollToTop} className="flex items-center gap-2 text-orange-500 hover:text-orange-600 transition-colors group">
             Back to Top
