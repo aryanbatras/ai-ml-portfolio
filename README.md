@@ -1,6 +1,6 @@
 # Ashutosh Portfolio
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/aryanbatras/ai-ml-portfolio)
 
 A modern, responsive portfolio website built with React, Tailwind CSS, and shadcn/ui. Powered by Cloudflare Pages for the frontend and Cloudflare Workers for the API backend. Features a sleek design with dark/light theme support, sidebar navigation, and production-ready architecture.
 
@@ -91,7 +91,7 @@ This builds the frontend assets and deploys via Wrangler. Your site will be live
 
 Configure custom domain in Cloudflare Dashboard > Pages > Your Project > Custom Domains.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/aryanbatras/ai-ml-portfolio)
 
 **Pro Tip**: Bind KV/DO/R2 in `wrangler.jsonc` and access via `env` in Worker routes.
 
